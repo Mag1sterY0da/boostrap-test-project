@@ -1,0 +1,213 @@
+@import 'bootstrap/scss/bootstrap';
+@import '../assets/fonts/fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+@import './colors.scss';
+@import './fonts.scss';
+
+@mixin set-font-size($breakpoint) {
+  font-size: map-get($font-sizes, $breakpoint);
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+// Buttons
+.btn-primary {
+  background-color: $blue;
+  border-radius: 1.875rem;
+  color: $white;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5rem 2.5rem;
+}
+
+main {
+  // Hero Section
+  .hero {
+    background-image: url('../assets/images/hero-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero-heading {
+      color: $dark-grey;
+      font-family: 'Univia Pro', sans-serif;
+      margin-bottom: 1rem;
+      @include set-font-size(xl);
+
+      .highlight {
+        color: $blue;
+      }
+    }
+
+    .hero-paragraph {
+      color: $dark-grey;
+      font-family: 'Univia Pro', sans-serif;
+    }
+  }
+
+  // Welcome Section
+  .welcome {
+    padding: 6rem 0;
+
+    .welcome-heading {
+      font-family: 'Univia Pro', sans-serif;
+      color: $blue;
+      @include set-font-size(md);
+    }
+
+    .welcome-paragraph {
+      font-family: 'Univia Pro', sans-serif;
+      color: $dark-grey;
+      @include set-font-size(sm);
+    }
+
+    .welcome-video {
+      &:hover {
+        filter: brightness(0.9);
+      }
+
+      .play-icon-container {
+        cursor: pointer;
+
+        &:hover .play-icon {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .features {
+    background-image: url('../assets/images/features-bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem 0;
+
+    .feature-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .opened .feature-content {
+      max-height: 20rem;
+    }
+
+    .features-heading {
+      font-family: 'Univia Pro', sans-serif;
+      color: $blue;
+      @include set-font-size(xl);
+    }
+
+    .feature-heading {
+      font-family: 'Univia Pro', sans-serif;
+      color: $blue;
+      cursor: pointer;
+      @include set-font-size(lg);
+    }
+
+    .feature-title {
+      font-family: 'Univia Pro', sans-serif;
+      color: $grey;
+      font-style: italic;
+      font-weight: 300;
+      @include set-font-size(sm);
+    }
+
+    .feature-paragraph {
+      font-family: 'Univia Pro', sans-serif;
+      @include set-font-size(sm);
+    }
+  }
+
+  .description {
+    padding: 6rem 0 8rem;
+
+    .description-heading {
+      font-family: 'Univia Pro', sans-serif;
+      color: $blue;
+    }
+
+    .description-paragraph {
+      font-family: 'Univia Pro', sans-serif;
+      color: $dark-grey;
+      @include set-font-size(sm);
+    }
+
+    .carousel-item {
+      background: linear-gradient(57deg, #005fad 0%, #7e7acb 59%, #d68cdf 100%);
+
+      .carousel-description-container {
+        padding: 5rem 8rem;
+
+        .carousel-heading {
+          font-family: 'Univia Pro', sans-serif;
+          color: $white;
+          @include set-font-size(md);
+        }
+
+        .carousel-paragraph {
+          font-family: 'Univia Pro', sans-serif;
+          color: $white;
+        }
+
+        .carousel-button {
+          background-color: $white;
+          color: $blue;
+        }
+      }
+    }
+
+    .description-cta {
+      max-width: 80%;
+
+      .description-cta-paragraph {
+        font-family: 'Univia Pro', sans-serif;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $blue;
+  color: $white;
+  font-family: 'Rubik', sans-serif;
+
+  .footer-heading {
+    @include set-font-size(xs);
+  }
+
+  .footer-link {
+    color: $light-grey;
+    font-weight: 300;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .footer-address {
+    color: $white;
+    font-weight: 300;
+
+    .footer-address-tel,
+    .footer-address-email {
+      color: $light-grey;
+    }
+  }
+
+  .footer-copyright {
+    background-color: rgba(0, 0, 0, 0.32);
+    color: rgba(255, 255, 255, 0.5);
+    @include set-font-size(xxs);
+
+    .footer-link-icon {
+      &:hover {
+        filter: brightness(2);
+      }
+    }
+  }
+}

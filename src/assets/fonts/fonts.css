@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Univia Pro';
+  src: url('UniviaPro-Medium.eot');
+  src: local('Univia Pro Medium'), local('UniviaPro-Medium'),
+    url('UniviaPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('UniviaPro-Medium.woff2') format('woff2'),
+    url('UniviaPro-Medium.woff') format('woff'),
+    url('UniviaPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Univia Pro';
+  src: url('UniviaPro-Regular.eot');
+  src: local('Univia Pro Regular'), local('UniviaPro-Regular'),
+    url('UniviaPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('UniviaPro-Regular.woff2') format('woff2'),
+    url('UniviaPro-Regular.woff') format('woff'),
+    url('UniviaPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

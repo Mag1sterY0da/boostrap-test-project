@@ -1,0 +1,129 @@
+@import './fonts.scss';
+
+@mixin set-font-size($breakpoint) {
+  font-size: map-get($font-sizes, $breakpoint);
+}
+
+// xl - 1200px
+@media screen and (max-width: 1200px) {
+  main {
+    .welcome-container {
+      max-width: 992px;
+    }
+  }
+
+  .footer {
+    .container {
+      max-width: 992px;
+    }
+  }
+}
+
+// lg - 992px
+@media (max-width: 992px) {
+  main {
+    .hero {
+      .hero-heading {
+        @include set-font-size(md);
+      }
+
+      .hero-paragraph {
+        @include set-font-size(md);
+      }
+    }
+
+    .welcome-container {
+      max-width: 768px;
+
+      .welcome-heading {
+        @include set-font-size(sm);
+      }
+
+      .welcome-paragraph {
+        @include set-font-size(xs);
+      }
+    }
+
+    .features {
+      .features-heading {
+        @include set-font-size(md);
+      }
+
+      .feature-heading {
+        @include set-font-size(sm);
+      }
+
+      .feature-title {
+        @include set-font-size(xs);
+      }
+
+      .feature-paragraph {
+        @include set-font-size(xs);
+      }
+    }
+
+    .description {
+      .description-heading {
+        @include set-font-size(md);
+        text-align: center;
+      }
+
+      .description-paragraph {
+        @include set-font-size(sm);
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      max-width: 768px;
+    }
+  }
+}
+
+// md - 768px
+@media (max-width: 768px) {
+  main {
+    .hero {
+      .hero-heading {
+        text-align: center;
+      }
+
+      .hero-paragraph {
+        @include set-font-size(sm);
+        text-align: center;
+      }
+    }
+
+    .welcome-container {
+      max-width: 576px;
+    }
+
+    .description {
+      padding: 3rem 0;
+      .description-paragraph {
+        @include set-font-size(xs);
+      }
+
+      .carousel-item {
+        .carousel-description-container {
+          padding: 4rem 3rem;
+
+          .carousel-heading {
+            @include set-font-size(sm);
+          }
+
+          .carousel-paragraph {
+            @include set-font-size(xs);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      max-width: 576px;
+    }
+  }
+}
