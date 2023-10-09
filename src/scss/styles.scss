@@ -35,7 +35,7 @@ main {
       color: $dark-grey;
       font-family: 'Univia Pro', sans-serif;
       margin-bottom: 1rem;
-      @include set-font-size(xl);
+      @include set-font-size(xxl);
 
       .highlight {
         color: $blue;
@@ -45,6 +45,7 @@ main {
     .hero-paragraph {
       color: $dark-grey;
       font-family: 'Univia Pro', sans-serif;
+      @include set-font-size(md);
     }
   }
 
@@ -160,6 +161,20 @@ main {
       }
     }
 
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: auto;
+      padding: 0 1.2rem;
+    }
+
+    .carousel-control-prev {
+      justify-content: start;
+    }
+
+    .carousel-control-next {
+      justify-content: end;
+    }
+
     .description-cta {
       max-width: 80%;
 
@@ -175,6 +190,12 @@ main {
   background-color: $blue;
   color: $white;
   font-family: 'Rubik', sans-serif;
+
+  .bionic-footer-element {
+    position: absolute;
+    top: -102px; // Element height
+    left: 0;
+  }
 
   .footer-heading {
     @include set-font-size(xs);
